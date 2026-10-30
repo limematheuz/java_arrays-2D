@@ -21,6 +21,7 @@ public class Main {
             }
         }
 
+        System.out.println("\n---Matriz Original---");
         for (int i = 0; i < dimensiones.length; i++) {
             for (int j = 0; j < dimensiones[i].length; j++) {
                 System.out.print(dimensiones[i][j] + " | ");
