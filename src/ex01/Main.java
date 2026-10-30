@@ -16,7 +16,7 @@ public class Main {
 
         for (int i = 0; i < dimensiones.length; i++) {
             for (int j = 0; j < dimensiones[i].length; j++) {
-                System.out.print("Introduce valor ( " + i + ", " + j + " ): ");
+                System.out.print("Introduce valor [ " + i + ", " + j + " ]: ");
                 dimensiones[i][j] = sc.nextInt();
             }
         }
@@ -26,16 +26,21 @@ public class Main {
                 System.out.print(dimensiones[i][j] + " | ");
             }
         }
+        System.out.println();
 
-        int suma = 0;
-        for (int i = 0; i < dimensiones.length; i++) {
-            for (int j = 0; j < dimensiones[i].length; j++) {
-                suma += dimensiones[i][i];
+        int[] sumaColumnas = new int[columnas];
+
+        for (int j = 0; j < columnas; j++) {
+            int suma = 0;
+            for (int i = 0; i < filas; i++){
+                suma += dimensiones[i][j];
             }
+            sumaColumnas[j] = suma;
         }
-        System.out.println("la suma de las columnas: " + suma);
+        for (int i = 0; i < sumaColumnas.length; i++) {
+            System.out.println("Suma de la columna " + i + ": " + sumaColumnas[i]);
+        }
 
-//        double sumaColumna = new double[i][i];
     }
 }
 
